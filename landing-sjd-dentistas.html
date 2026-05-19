@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implante Dental en Una Sesión — SJD Dentistas</title>
+  <meta name="description" content="Descubre cómo recuperar tu diente en una sola sesión. Sin dolor, sin meses de espera. Más de 3.000 implantes realizados en Tenerife.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FAFAF8;
+      --off-white: #F3F1EC;
+      --cream: #EDE9E0;
+      --text-primary: #1A1A18;
+      --text-secondary: #4A4A45;
+      --text-muted: #7A7A72;
+      --accent: #5094a9;
+      --accent-hover: #437f91;
+      --accent-dark: #3a6d7d;
+      --accent-light: #e8f3f6;
+      --accent-lighter: #f2f8fa;
+      --dark-bg: #1A1A18;
+      --dark-text: #E8E6E0;
+      --border: #DDD9D0;
+      --green: #3a7d5c;
+      --green-light: #edf5f0;
+      --red: #9b4a3a;
+      --red-light: #fdf2f0;
+      --radius: 12px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      /* Paper grain */
+      background-image: radial-gradient(circle at 20% 50%, rgba(0,0,0,0.01) 0%, transparent 50%),
+                         radial-gradient(circle at 80% 20%, rgba(0,0,0,0.008) 0%, transparent 50%);
+    }
+
+    /* === REVEAL ANIMATION === */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* === TOP STRIP === */
+    .top-strip {
+      background: var(--dark-bg);
+      padding: 10px 1.25rem;
+      text-align: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: rgba(232, 230, 224, 0.7);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* === HERO === */
+    .hero {
+      padding: 2.5rem 1.25rem 2.5rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.75rem, 5.5vw, 2.4rem);
+      line-height: 1.18;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subheadline {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .subheadline strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* === FORM CARD === */
+    .form-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-card label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .form-card input[type="text"],
+    .form-card input[type="tel"],
+    .form-card input[type="email"] {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: 'DM Sans', sans-serif;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--text-primary);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      margin-bottom: 1rem;
+      -webkit-appearance: none;
+    }
+
+    .form-card input[type="text"]:focus,
+    .form-card input[type="tel"]:focus,
+    .form-card input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(80, 148, 169, 0.15);
+    }
+
+    .form-card input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+
+    .checkbox-wrapper input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      margin: 0;
+      margin-top: 1px;
+      flex-shrink: 0;
+      accent-color: var(--accent);
+      cursor: pointer;
+      -webkit-appearance: auto;
+      appearance: auto;
+    }
+
+    .checkbox-wrapper label {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
+    .checkbox-wrapper label a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      font-size: 1.05rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.01em;
+      -webkit-appearance: none;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background: var(--accent-hover);
+    }
+
+    .cta-button:active {
+      transform: scale(0.985);
+    }
+
+    .form-subtext {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* === TRUST STRIP === */
+    .trust-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 1.25rem;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      text-align: center;
+    }
+
+    .trust-item {
+      padding: 0.5rem 0;
+    }
+
+    .trust-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .trust-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* === SECTION BASE === */
+    .section {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2.5rem;
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      color: var(--text-primary);
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
+
+    /* === DISCOVER LIST === */
+    .discover-list {
+      list-style: none;
+    }
+
+    .discover-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.85rem 0;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .discover-list li:last-child {
+      border-bottom: none;
+    }
+
+    .discover-list li svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    /* === OBJECTIONS === */
+    .objections {
+      padding: 0 1.25rem 2.5rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .objection-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .objection-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .objection-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .objection-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+    }
+
+    .objection-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+
+    .objection-text span {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* === COMPARISON === */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 0.5rem;
+    }
+
+    .compare-card {
+      border-radius: 10px;
+      padding: 1.25rem 1rem;
+    }
+
+    .compare-card.bad {
+      background: var(--red-light);
+      border: 1px solid #f0d5d0;
+    }
+
+    .compare-card.good {
+      background: var(--accent-lighter);
+      border: 1px solid rgba(80, 148, 169, 0.2);
+    }
+
+    .compare-card .compare-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .compare-card.bad .compare-label { color: var(--red); }
+    .compare-card.good .compare-label { color: var(--accent-dark); }
+
+    .compare-card ul {
+      list-style: none;
+    }
+
+    .compare-card ul li {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .compare-card.bad ul li { color: var(--red); }
+    .compare-card.good ul li { color: var(--accent-dark); }
+
+    .compare-card ul li span {
+      flex-shrink: 0;
+      font-size: 0.85rem;
+    }
+
+    /* === STEPS === */
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-item:last-child {
+      border-bottom: none;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .step-content strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+
+    .step-content span {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* === REFRAME === */
+    .reframe {
+      background: var(--dark-bg);
+      padding: 3.5rem 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .reframe-inner {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .reframe blockquote {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.4rem, 4.5vw, 1.8rem);
+      line-height: 1.3;
+      color: var(--dark-text);
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 0;
+    }
+
+    .reframe blockquote::before {
+      content: '"';
+      font-family: 'DM Serif Display', serif;
+      font-size: 4rem;
+      color: var(--accent);
+      position: absolute;
+      top: -1.2rem;
+      left: -0.15rem;
+      line-height: 1;
+      opacity: 0.5;
+    }
+
+    .reframe p {
+      font-size: 0.92rem;
+      color: rgba(232, 230, 224, 0.6);
+      line-height: 1.65;
+      max-width: 42ch;
+    }
+
+    /* === QUALIFICATION === */
+    .qualify-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 0.5rem;
+    }
+
+    .qualify-card {
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .qualify-card.yes {
+      background: var(--green-light);
+      border: 1px solid rgba(58, 125, 92, 0.15);
+    }
+
+    .qualify-card.no {
+      background: var(--red-light);
+      border: 1px solid #f0d5d0;
+    }
+
+    .qualify-card .qualify-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+
+    .qualify-card.yes .qualify-label { color: var(--green); }
+    .qualify-card.no .qualify-label { color: var(--red); }
+
+    .qualify-card ul {
+      list-style: none;
+    }
+
+    .qualify-card ul li {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      padding: 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .qualify-card.yes ul li { color: #2d5e45; }
+    .qualify-card.no ul li { color: var(--red); }
+
+    .qualify-card ul li span {
+      flex-shrink: 0;
+      font-size: 0.85rem;
+    }
+
+    /* === LUIS CARD === */
+    .luis-card {
+      background: var(--accent-lighter);
+      border: 1px solid rgba(80, 148, 169, 0.15);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .luis-card .luis-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1rem;
+    }
+
+    .luis-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .luis-header-text strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    .luis-header-text span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .luis-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .luis-card p + p {
+      margin-top: 0.75rem;
+    }
+
+    /* === FAQ === */
+    .faq-list {
+      margin-top: 0.5rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.1rem 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .faq-question:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 0 1.1rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* === PROOF BAR === */
+    .proof-bar {
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .proof-bar p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .proof-bar strong {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .proof-stars {
+      color: #D4A843;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .proof-rating {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* === FINAL CTA === */
+    .final-cta {
+      background: var(--accent);
+      padding: 3rem 1.25rem;
+    }
+
+    .final-cta-inner {
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.3rem, 4.5vw, 1.7rem);
+      line-height: 1.25;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    .final-cta p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .final-cta .cta-button {
+      background: var(--white);
+      color: var(--accent-dark);
+      display: inline-block;
+      width: auto;
+      padding: 16px 36px;
+      font-weight: 700;
+    }
+
+    .final-cta .cta-button:hover {
+      background: var(--off-white);
+    }
+
+    .final-cta-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* === INLINE CTA === */
+    .inline-cta {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2.5rem;
+      text-align: center;
+    }
+
+    .inline-cta .cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 24px;
+    }
+
+    /* === DIVIDERS === */
+    .divider {
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      padding: 0 1.25rem;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* === LEGAL === */
+    .legal {
+      padding: 1.5rem 1.25rem;
+      max-width: 520px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .legal p {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .legal a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+
+    /* === DESKTOP === */
+    @media (min-width: 640px) {
+      .hero {
+        padding: 3.5rem 2rem 3rem;
+        text-align: center;
+      }
+
+      .eyebrow {
+        justify-content: center;
+      }
+
+      h1 {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .subheadline {
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+      }
+
+      .form-card {
+        padding: 2rem;
+      }
+
+      .section {
+        padding: 0 2rem 3rem;
+      }
+
+      .objections {
+        padding: 0 2rem 3rem;
+      }
+
+      .trust-strip {
+        padding: 1.5rem 2rem;
+      }
+
+      .reframe {
+        padding: 4.5rem 2rem;
+      }
+
+      .final-cta {
+        padding: 4rem 2rem;
+      }
+
+      .qualify-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-label {
+        justify-content: flex-start;
+      }
+
+      .inline-cta {
+        padding: 0 2rem 3rem;
+      }
+
+      .divider {
+        padding: 0 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .legal {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP STRIP ============ -->
+  <div class="top-strip">
+    <span class="live-dot"></span>
+    SJD Dentistas · Implante de carga inmediata · Tenerife
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="eyebrow">Para personas que han perdido un diente en Tenerife</div>
+
+    <h1>Descubre cómo recuperar tu diente <em>en una sola sesión</em></h1>
+
+    <p class="subheadline">Mira el vídeo donde Luis te explica el método paso a paso — y por qué <strong>más de 3.000 pacientes</strong> ya lo han elegido.</p>
+
+    <!-- FORM -->
+    <div class="form-card" id="formulario">
+      <form id="lead-form" onsubmit="handleSubmit(event)">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: María" required>
+
+        <label for="telefono">Tu teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 612 345 678" pattern="[0-9\s]{9,12}" minlength="9" required>
+
+        <label for="email">Tu email</label>
+        <input type="email" id="email" name="email" placeholder="Ej: maria@email.com" required>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">Acepto la <a href="#" target="_blank">política de privacidad</a></label>
+        </div>
+
+        <button type="submit" class="cta-button" id="submit-btn">Ver el vídeo gratis →</button>
+      </form>
+      <p class="form-subtext">Sin compromiso. Solo un vídeo donde Luis te explica el tratamiento, los tiempos y lo que puedes esperar.</p>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <div class="trust-strip">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-number">3.000+</div>
+        <div class="trust-label">Implantes realizados</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">4,8</div>
+        <div class="trust-label">Estrellas en Google</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-number">1 día</div>
+        <div class="trust-label">Diente fijo listo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ WHAT YOU'LL DISCOVER ============ -->
+  <section class="section reveal">
+    <div class="section-label">En el vídeo descubrirás</div>
+    <h2>Lo que nadie te ha explicado sobre implantes</h2>
+    <ul class="discover-list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Por qué puedes salir con un diente fijo el mismo día — y cómo es posible sin riesgos
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        La diferencia real entre un implante convencional y uno de carga inmediata (y cuál te conviene)
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Qué se siente durante el proceso — explicado sin tecnicismos por alguien que lleva +3.000 casos
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Cuánto cuesta realmente y qué opciones de financiación hay
+      </li>
+    </ul>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ============ 3 OBJECTIONS ============ -->
+  <section class="objections reveal">
+    <div class="section-label" style="padding-left: 0;">Las 3 dudas más comunes</div>
+
+    <div class="objection-item">
+      <div class="objection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="objection-text">
+        <strong>¿Duele?</strong>
+        <span>La mayoría de pacientes dicen que menos que sacarse una muela. Cirugía mínimamente invasiva con anestesia local.</span>
+      </div>
+    </div>
+
+    <div class="objection-item">
+      <div class="objection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+      </div>
+      <div class="objection-text">
+        <strong>¿Es muy caro?</strong>
+        <span>Trabajamos con financiación en cuotas adaptadas a ti. Y cada mes que pasa sin hacer nada, el tratamiento se complica y cuesta más.</span>
+      </div>
+    </div>
+
+    <div class="objection-item">
+      <div class="objection-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="objection-text">
+        <strong>¿Es seguro hacerlo todo en un día?</strong>
+        <span>Más de 3.000 casos avalan el método. Planificación 3D al milímetro antes de tocar nada — cero improvisación.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INLINE CTA ============ -->
+  <div class="inline-cta">
+    <a href="#formulario" class="cta-button" onclick="scrollToForm(event)">Ver el vídeo gratis →</a>
+  </div>
+
+  <div class="divider"><hr></div>
+
+  <!-- ============ COMPARISON ============ -->
+  <section class="section reveal">
+    <div class="section-label">La diferencia</div>
+    <h2>Implante convencional vs. carga inmediata</h2>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <div class="compare-label">Convencional</div>
+        <ul>
+          <li><span>✗</span> Meses sin diente</li>
+          <li><span>✗</span> Prótesis removible</li>
+          <li><span>✗</span> Múltiples visitas</li>
+          <li><span>✗</span> Molestias prolongadas</li>
+        </ul>
+      </div>
+      <div class="compare-card good">
+        <div class="compare-label">Carga inmediata</div>
+        <ul>
+          <li><span>✓</span> Diente fijo el mismo día</li>
+          <li><span>✓</span> Nada de quita y pon</li>
+          <li><span>✓</span> Solo 5 citas en total</li>
+          <li><span>✓</span> Recuperación en 48h</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section reveal">
+    <div class="section-label">Cómo funciona</div>
+    <h2>3 pasos, un solo día con cirugía</h2>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <strong>Hablamos y estudiamos tu caso</strong>
+          <span>Consulta sin compromiso + estudio 3D completo. Planificamos al milímetro antes de tocar nada.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <strong>Implante + diente fijo el mismo día</strong>
+          <span>Con anestesia local y cirugía guiada, colocamos el implante y un diente provisional fijo. Sales sonriendo.</span>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <strong>Corona definitiva en zirconio</strong>
+          <span>Cuando el hueso se ha integrado, sustituimos el provisional por la pieza final. Diente para más de 20 años.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INLINE CTA ============ -->
+  <div class="inline-cta">
+    <a href="#formulario" class="cta-button" onclick="scrollToForm(event)">Quiero ver el vídeo →</a>
+  </div>
+
+  <!-- ============ REFRAME ============ -->
+  <div class="reframe">
+    <div class="reframe-inner reveal">
+      <blockquote>Lo más caro que puedes hacer con un diente perdido es no hacer nada.</blockquote>
+      <p>Cada mes que pasa, los dientes de al lado se mueven, la mordida se descompensa y lo que hoy es un implante sencillo se convierte en un tratamiento más largo y más caro. El momento más barato para actuar siempre es hoy.</p>
+    </div>
+  </div>
+
+  <!-- ============ QUALIFICATION ============ -->
+  <section class="section reveal">
+    <div class="section-label">¿Es para ti?</div>
+    <h2>Este vídeo te interesa si...</h2>
+    <div class="qualify-grid">
+      <div class="qualify-card yes">
+        <div class="qualify-label">✓ Sí es para ti</div>
+        <ul>
+          <li><span>→</span> Has perdido uno o varios dientes y llevas tiempo sin solucionarlo</li>
+          <li><span>→</span> Te tapas la boca al sonreír o evitas ciertas situaciones sociales</li>
+          <li><span>→</span> Quieres entender tus opciones reales antes de decidir nada</li>
+          <li><span>→</span> Vives en Tenerife o puedes desplazarte para el tratamiento</li>
+        </ul>
+      </div>
+      <div class="qualify-card no">
+        <div class="qualify-label">✗ No es para ti</div>
+        <ul>
+          <li><span>→</span> Buscas el precio más barato sin importar el método ni el resultado</li>
+          <li><span>→</span> No tienes intención real de solucionarlo y solo curioseas</li>
+          <li><span>→</span> Prefieres seguir con la prótesis removible y estás conforme</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><hr></div>
+
+  <!-- ============ ABOUT LUIS ============ -->
+  <section class="section reveal">
+    <div class="section-label">Quién te lo explica</div>
+    <div class="luis-card">
+      <div class="luis-header">
+        <!-- INSTRUCCIONES: sustituir iniciales por <img> con foto real de Luis -->
+        <div class="luis-avatar">LR</div>
+        <div class="luis-header-text">
+          <strong>Luis Rodríguez de Vera</strong>
+          <span>Dentista · SJD Dentistas, Tenerife</span>
+        </div>
+      </div>
+      <p>Más de 3.000 implantes colocados. Dos clínicas en Tenerife — La Laguna y Las Chafiras. Pionero en implantes de carga inmediata con cirugía guiada digital en la isla.</p>
+      <p>Le gusta que le llames Luis, no "el doctor". Te explica todo en palabras que entiendas y te deja preguntar lo que necesites. Sin prisas, sin juicios.</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section reveal">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2>Sobre el vídeo y el registro</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          ¿El vídeo es realmente gratis?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Sí, 100%. Sin trampa. Es un vídeo donde Luis te explica el tratamiento paso a paso para que puedas tomar una decisión informada. No te vamos a perseguir con llamadas ni a presionarte para nada.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          ¿Por qué me pedís el teléfono?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Para que, si después de ver el vídeo tienes dudas sobre tu caso concreto, podamos contactarte y resolverlas. Muchos pacientes prefieren una llamada rápida a escribir un email. Si no quieres que te llamemos, solo dilo — sin problema.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          ¿Cuánto dura el vídeo?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          Menos de 10 minutos. Luis te explica el tratamiento completo, responde las dudas más comunes y te enseña exactamente cómo funciona el proceso de principio a fin. Sin tecnicismos, sin rodeos.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          ¿Después del vídeo estoy obligado a algo?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          No. Cero compromiso. Ves el vídeo, y si te interesa, puedes pedir una valoración gratuita en consulta. Si no, no pasa nada. Nadie te va a presionar.
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL PROOF ============ -->
+  <div class="proof-bar">
+    <div class="proof-stars">★★★★★</div>
+    <p>La frase que más se repite entre nuestros pacientes: <strong>"Ojalá lo hubiese hecho antes."</strong></p>
+    <p class="proof-rating">4,8 estrellas en Google · 234 reseñas verificadas</p>
+  </div>
+
+  <!-- ============ FINAL CTA ============ -->
+  <div class="final-cta">
+    <div class="final-cta-inner">
+      <h2>Tienes dos opciones: seguir dándole vueltas o darle al play.</h2>
+      <p>Dentro de tres meses vas a seguir igual, o vas a estar sonriendo sin pensarlo. Eso depende de lo que hagas ahora.</p>
+      <a href="#formulario" class="cta-button" onclick="scrollToForm(event)">Ver el vídeo gratis →</a>
+      <div class="final-cta-note">Sin compromiso · Sin tarjeta · Solo un vídeo</div>
+    </div>
+  </div>
+
+  <!-- ============ LEGAL ============ -->
+  <footer class="legal">
+    <p>© SJD Dentistas · Tenerife · Al enviar este formulario aceptas nuestra <a href="#">política de privacidad</a>. Tus datos se usarán únicamente para darte acceso al vídeo y contactarte sobre tu caso. Puedes darte de baja en cualquier momento. No compartimos tus datos con terceros.</p>
+  </footer>
+
+  <script>
+    // ⚠️ GOOGLE APPS SCRIPT URL:
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz6RbbfK3OSL4XeJbfo9PGSCHRI2NHoTnzrCrjxpTPnR68g0f1uKW2peIDViJ8UmC8k/exec';
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+
+      const btn = document.getElementById('submit-btn');
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!document.getElementById('privacy').checked) {
+        alert('Debes aceptar la política de privacidad para continuar.');
+        return;
+      }
+
+      if (!nombre || !telefono || !email) {
+        alert('Por favor, rellena todos los campos.');
+        return;
+      }
+
+      const digitsOnly = telefono.replace(/\s/g, '');
+      if (!/^\d{9}$/.test(digitsOnly)) {
+        alert('El teléfono debe tener 9 cifras.');
+        document.getElementById('telefono').focus();
+        return;
+      }
+
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+
+      try {
+        if (!GOOGLE_SCRIPT_URL) {
+          console.warn('GOOGLE_SCRIPT_URL no configurada.');
+          return;
+        }
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify({ nombre, telefono: digitsOnly, email })
+        });
+
+        // ⚠️ INSTRUCCIONES: cambiar esta URL cuando la página del VSL esté lista
+        // window.location.href = 'https://tu-dominio.com/ver-video';
+
+        document.getElementById('lead-form').innerHTML = '<p style="text-align:center;font-size:1.1rem;color:#1A1A18;padding:1.5rem 0;"><strong>¡Listo!</strong><br>En breve recibirás acceso al vídeo.</p>';
+
+      } catch (error) {
+        console.error('Error enviando lead:', error);
+        alert('Hubo un error. Inténtalo de nuevo.');
+        btn.textContent = 'Ver el vídeo gratis →';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    }
+
+    function scrollToForm(e) {
+      e.preventDefault();
+      document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('nombre').focus(), 500);
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-answer').style.maxHeight = null;
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
