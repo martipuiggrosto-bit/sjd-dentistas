@@ -8,6 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1552801882944063');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1552801882944063&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -1279,10 +1296,13 @@
           body: JSON.stringify({ nombre, telefono: digitsOnly, email })
         });
 
-        // ⚠️ INSTRUCCIONES: cambiar esta URL cuando la página del VSL esté lista
-        // window.location.href = 'https://tu-dominio.com/ver-video';
+        // Disparar evento Lead en Meta Pixel
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'VSL Implante Carga Inmediata' });
+        }
 
-        document.getElementById('lead-form').innerHTML = '<p style="text-align:center;font-size:1.1rem;color:#1A1A18;padding:1.5rem 0;"><strong>¡Listo!</strong><br>En breve recibirás acceso al vídeo.</p>';
+        // Redirigir a la página de gracias / VSL
+        window.location.href = '/gracias.html';
 
       } catch (error) {
         console.error('Error enviando lead:', error);
