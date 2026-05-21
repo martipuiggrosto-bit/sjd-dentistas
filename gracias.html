@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu vídeo está listo — SJD Dentistas</title>
+  <meta name="description" content="Mira el vídeo donde Luis te explica cómo recuperar tu diente en una sola sesión.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1552801882944063');
+  fbq('track', 'PageView');
+  fbq('track', 'Lead', { content_name: 'VSL Implante Carga Inmediata' });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1552801882944063&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #FAFAF8;
+      --off-white: #F3F1EC;
+      --text-primary: #1A1A18;
+      --text-secondary: #4A4A45;
+      --text-muted: #7A7A72;
+      --accent: #5094a9;
+      --accent-hover: #437f91;
+      --accent-dark: #3a6d7d;
+      --accent-light: #e8f3f6;
+      --dark-bg: #1A1A18;
+      --border: #DDD9D0;
+      --radius: 12px;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      background-image: radial-gradient(circle at 20% 50%, rgba(0,0,0,0.01) 0%, transparent 50%),
+                         radial-gradient(circle at 80% 20%, rgba(0,0,0,0.008) 0%, transparent 50%);
+    }
+
+    /* === TOP STRIP === */
+    .top-strip {
+      background: var(--dark-bg);
+      padding: 10px 1.25rem;
+      text-align: center;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: rgba(232, 230, 224, 0.7);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #4ade80;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* === MAIN === */
+    .main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .confirmation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #edf5f0;
+      color: #2d5e45;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .confirmation-badge svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      line-height: 1.2;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* === VIDEO CONTAINER === */
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: var(--dark-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 8px 32px rgba(26, 26, 24, 0.15);
+    }
+
+    .video-container iframe,
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    /* === WHAT'S NEXT === */
+    .next-steps {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .next-steps h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .step-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 0.85rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .step-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* === CTA === */
+    .cta-section {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 1.05rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--accent);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .cta-button:hover {
+      background: var(--accent-hover);
+    }
+
+    .cta-button:active {
+      transform: scale(0.985);
+    }
+
+    .cta-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* === FOOTER === */
+    .legal {
+      padding: 1.5rem 1.25rem;
+      max-width: 640px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .legal p {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .legal a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .main {
+      animation: fadeUp 0.6s ease-out both;
+    }
+
+    .video-container {
+      animation: fadeUp 0.6s ease-out 0.15s both;
+    }
+
+    .next-steps {
+      animation: fadeUp 0.6s ease-out 0.3s both;
+    }
+
+    /* === DESKTOP === */
+    @media (min-width: 640px) {
+      .main {
+        padding: 3.5rem 2rem 3rem;
+        text-align: center;
+      }
+
+      .subtitle {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+      }
+
+      .next-steps {
+        padding: 2rem;
+        text-align: left;
+      }
+
+      .video-note {
+        margin-bottom: 3rem;
+      }
+
+      .legal {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP STRIP ============ -->
+  <div class="top-strip">
+    <span class="live-dot"></span>
+    SJD Dentistas · Implante de carga inmediata · Tenerife
+  </div>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="confirmation-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      ¡Registro completado!
+    </div>
+
+    <h1>Tu vídeo está <em>listo</em></h1>
+    <p class="subtitle">Dale al play. Luis te explica en menos de 10 minutos cómo funciona el implante de carga inmediata — paso a paso, sin tecnicismos.</p>
+
+    <!-- ============ VIDEO ============ -->
+    <div class="video-container">
+      <div id="vidalytics_embed_qwgV8X8p6dc5mXBX" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+      <script type="text/javascript">
+      (function (v, i, d, a, l, y, t, c, s) {
+          y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+          if (!vsl){vsl=function(u,cb){
+              if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+              if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+              i.getElementsByTagName("head")[0].appendChild(s);
+          };}
+          vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+      })(window, document, 'Vidalytics', 'vidalytics_embed_qwgV8X8p6dc5mXBX', 'https://fast.vidalytics.com/embeds/tB1dcL9d/qwgV8X8p6dc5mXBX/');
+      </script>
+    </div>
+    <p class="video-note">9 min · Caso real · Sin compromiso</p>
+
+    <!-- ============ NEXT STEPS ============ -->
+    <div class="next-steps">
+      <h2>¿Qué pasa después del vídeo?</h2>
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Ve el vídeo entero.</strong> Luis responde las dudas más comunes y te explica exactamente qué puedes esperar.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Si te interesa, pide tu valoración.</strong> Sin coste, sin compromiso. Vienes a consulta, hablamos y tú decides.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Si no te convence, no pasa nada.</strong> No te vamos a perseguir. El vídeo es tuyo para que decidas a tu ritmo.</div>
+      </div>
+    </div>
+
+    <!-- ============ CTA ============ -->
+    <div class="cta-section">
+      <p>¿Ya has visto el vídeo y quieres dar el siguiente paso?</p>
+      <!-- INSTRUCCIONES: cambiar el href al enlace de reserva / WhatsApp / calendly -->
+      <a href="https://wa.me/34682617810?text=Hola%2C%20he%20visto%20el%20v%C3%ADdeo%20y%20me%20gustar%C3%ADa%20pedir%20una%20valoraci%C3%B3n" class="cta-button" target="_blank">Pedir valoración gratuita →</a>
+      <div class="cta-note">Sin coste · Sin compromiso · Tenerife</div>
+    </div>
+  </main>
+
+  <!-- ============ LEGAL ============ -->
+  <footer class="legal">
+    <p>© SJD Dentistas · Tenerife · <a href="#">Política de privacidad</a> · <a href="#">Aviso legal</a></p>
+  </footer>
+
+</body>
+</html>
